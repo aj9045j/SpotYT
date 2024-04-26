@@ -12,7 +12,7 @@ export default function Login() {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		fetch(`http://localhost:5000/login`, {
+		fetch(`http://15.207.196.70:5000/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ export default function GetPlaylist(props) {
     const [code, setcode] = useState('');
 
     const handleauth = async (event) => {
-        fetch('http://localhost:5000/auth').then(response => {
+        fetch('http://15.207.196.70:5000/auth').then(response => {
             if (response.ok) {
                 return response.json(); // Parse the response body as JSON
             } else {

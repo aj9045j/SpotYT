@@ -7,7 +7,7 @@ export default function ShowPlaylist(props) {
     useEffect(() => {
         const fetchSongs = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/fetchPlaylist/${props.email}`);
+                const response = await fetch(`http://15.207.196.70:5000/fetchPlaylist/${props.email}`);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch songs');

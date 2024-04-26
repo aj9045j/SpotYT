@@ -20,7 +20,7 @@ export default function Song() {
     useEffect(() => {
         const fetchSongs = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/fetchsong/${queryParam}`);
+                const response = await fetch(`http://15.207.196.70:5000/fetchsong/${queryParam}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch songs');
                 }
@@ -42,7 +42,7 @@ export default function Song() {
             await Promise.all(
                 songs.map(async (song) => {
                     try {
-                        const response = await fetch(`http://localhost:5000/fetchImage/${song}`);
+                        const response = await fetch(`http://15.207.196.70:5000/fetchImage/${song}`);
                         if (!response.ok) {
                             throw new Error('Failed to fetch image');
                         }
@@ -61,7 +61,7 @@ export default function Song() {
 
     const playSong = async (query) => {
         try {
-            const response = await fetch(`http://localhost:5000/fetchurl/${query}`);
+            const response = await fetch(`http://15.207.196.70:5000/fetchurl/${query}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch song URL');
             }

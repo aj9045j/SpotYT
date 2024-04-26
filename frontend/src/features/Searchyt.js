@@ -11,7 +11,7 @@ export default function Searchyt() {
         event.preventDefault();
         console.log(query);
 
-        fetch(`http://localhost:5000/searchyt`, {
+        fetch(`http://15.207.196.70:5000/searchyt`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

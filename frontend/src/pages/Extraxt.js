@@ -21,7 +21,7 @@ export default function Extraxt() {
 
             if (sessionId) {
                 try {
-                    const response = await axios.get('http://localhost:5000/api/getuser', {
+                    const response = await axios.get('http://15.207.196.70:5000/api/getuser', {
                         params: { sessionId: sessionId }
                     });
                     setUser(response.data);
