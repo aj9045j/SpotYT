@@ -6,7 +6,7 @@ async function fetchSong(req, res) {
     try {
         const Playlist = await playlist.findOne({ playlistName: playlistId });
 
-
+        console.log(playlistId);
 
 
 

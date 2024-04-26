@@ -38,7 +38,7 @@ async function searchPlaylist(req, res) {
         const playlistIdPattern = /playlist\/([a-zA-Z0-9]+)/;
         const match = playlistUrl.match(playlistIdPattern);
         const playlistId = match[1];
-        console.log(playlistId);
+        // console.log(playlistId);
 
         const tracks = await spotifyApi.getPlaylistTracks(playlistId);
 

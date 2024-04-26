@@ -5,7 +5,7 @@ const { playMusic } = require('../service/playMusic');
 
 async function fetchurl(req, res) {
     try {
-        const query = req.params.query; // Accessing query directly from req.params
+        const query = await req.params.query; // Accessing query directly from req.params
 
         console.log(query);
 
@@ -13,7 +13,7 @@ async function fetchurl(req, res) {
         let song = await Song.findOne({ name: query });
 
         if (!song) {
-            
+
             const videoId = await searchVideo(query);
             song = new Song({ name: query, videoid: videoId });
             await song.save();
@@ -34,9 +34,10 @@ async function fetchurl(req, res) {
         }
 
         // Download the audio from YouTube as MP3
-        const downloadUrl = await playMusic(song.videoid);
+        const response = await playMusic(song.videoid);
+        const downloadUrl = await response.audioUrl;
         const imageUrl = await song.imageurl;
-       
+        console.log(downloadUrl);
         res.status(200).json({ downloadUrl: downloadUrl, imageUrl: imageUrl });
     } catch (error) {
         console.error('Error fetching video URL:', error);

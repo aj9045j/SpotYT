@@ -12,7 +12,9 @@ const { register } = require('./controllers/newuser.js');
 const { userDetail } = require('./controllers/userDetail')
 const {fetchSong} = require('./controllers/fetchSong.js');
 const { fetchurl } = require('./controllers/fetchurl.js');
-const { fetchImage } = require('./controllers/fetchImage.js')
+const { fetchImage } = require('./controllers/fetchImage.js');
+const { searchyt } = require('./controllers/searchyt.js');
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,6 +30,7 @@ mongoose.connect('mongodb+srv://aj9045j:joshi9045@cluster0.xz5qt4p.mongodb.net/u
 app.post('/login', handlelogin);
 app.post('/register', register);
 app.post('/search', searchPlaylist);
+app.post('/searchyt', searchyt);
 
 app.get('/api/getuser', userDetail);
 app.get('/auth', redirectAuth);

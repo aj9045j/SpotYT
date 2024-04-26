@@ -8,13 +8,16 @@ async function playMusic(videoId) {
 
 
         const videoInfo = await ytdl.getInfo(videoId);
-        const audioFormat = ytdl.chooseFormat(videoInfo.formats, { filter: 'audioonly' });
-
+        const audioFormat = await ytdl.chooseFormat(videoInfo.formats, { filter: 'audioonly' });
+        const thumbnailUrl = await videoInfo.player_response.videoDetails.thumbnail.thumbnails[0].url;
         if (!audioFormat) {
             throw new Error('No audio format found for the video.');
         }
 
-        return audioFormat.url;
+        return {
+            audioUrl: audioFormat.url,
+            thumbnailUrl: thumbnailUrl
+        };
 
     } catch (error) {
         console.error('Error fetching video URL:', error);
@@ -23,6 +26,8 @@ async function playMusic(videoId) {
 
 
 }
+
+
 
 module.exports = {
     playMusic,
