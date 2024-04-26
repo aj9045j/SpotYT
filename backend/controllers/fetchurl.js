@@ -37,7 +37,7 @@ async function fetchurl(req, res) {
         const response = await playMusic(song.videoid);
         const downloadUrl = await response.audioUrl;
         const imageUrl = await song.imageurl;
-        console.log(downloadUrl);
+
         res.status(200).json({ downloadUrl: downloadUrl, imageUrl: imageUrl });
     } catch (error) {
         console.error('Error fetching video URL:', error);

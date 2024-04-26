@@ -6,7 +6,7 @@ export default function GetPlaylist(props) {
     const [code, setcode] = useState('');
 
     const handleauth = async (event) => {
-        fetch('https://spotyt.onrender.com/auth').then(response => {
+        fetch('http://localhost:5000/auth').then(response => {
             if (response.ok) {
                 return response.json(); // Parse the response body as JSON
             } else {
@@ -44,7 +44,7 @@ export default function GetPlaylist(props) {
                 <div className="buttonn-base"></div>
             </button>
             <h1>Upload Spotify Playlist</h1>
-            <form action={`https://spotyt.onrender.com/search`} method='POST'>
+            <form action={`http://localhost:5000/search`} method='POST'>
                 <label htmlFor="url">enter the spotify url</label>
                 <input
                     placeholder="Type something here...."

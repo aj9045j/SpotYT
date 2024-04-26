@@ -11,7 +11,7 @@ export default function Searchyt() {
         event.preventDefault();
         console.log(query);
 
-        fetch(`https://spotyt.onrender.com/searchyt`, {
+        fetch(`http://localhost:5000/searchyt`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

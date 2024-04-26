@@ -12,7 +12,7 @@ export default function Login() {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		fetch(`https://spotyt.onrender.com/login`, {
+		fetch(`http://localhost:5000/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

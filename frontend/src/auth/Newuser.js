@@ -11,7 +11,7 @@ export default function Newuser() {
 
     return (
         <div className="cont">
-            <form action="https://spotyt.onrender.com/register" method="POST" className="form">
+            <form action="http://localhost:5000/register" method="POST" className="form">
                 <div className="form_front">
                     <div className="form_details">Sign Up</div>
                     <input
