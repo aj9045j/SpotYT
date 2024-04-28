@@ -3,6 +3,7 @@ import '../style/song.css';
 
 export default function Song() {
     const [isVisible, setIsVisible] = useState(false);
+    const [isSeen, setisseen] = useState(false);
     const [songs, setSongs] = useState([]);
     const [audioUrl, setAudioUrl] = useState('');
     const [currImage, setCurrImage] = useState('');
@@ -27,7 +28,7 @@ export default function Song() {
 
 
                 const data = await response.json();
-                console.log(data.songs);
+
                 setSongs(data.songs);
             } catch (error) {
                 console.error('Error fetching songs:', error);
@@ -68,7 +69,7 @@ export default function Song() {
             const data = await response.json();
             setcurrindex(songs.indexOf(query));
             setAudioUrl(data.downloadUrl);
-            console.log(query,data.downloadUrl);
+
             setCurrImage(data.imageUrl);
 
         } catch (error) {
@@ -87,9 +88,10 @@ export default function Song() {
 
     const toggleBox = () => {
         setIsVisible(prevState => !prevState);
+        setisseen(prevState => !prevState);
     };
     return (
-        <div className=''>
+        <div className='ss'>
 
             <div className='song-list'>
                 <h1>ShowSong</h1>
@@ -107,7 +109,7 @@ export default function Song() {
                 </ul>
             </div>
 
-            <div className="container">
+            <div className={`container ${isSeen ? 'seen' : 'nseen'}`}>
                 <div className={`box ${isVisible ? 'show' : 'hide'}`}>
                     <div className='player'>
 
@@ -116,9 +118,8 @@ export default function Song() {
                     </div>
                 </div>
 
-                <button className="toggle-btn" onClick={toggleBox}>Toggle Box</button>
             </div>
-
+            <button className="toggle-btn" onClick={toggleBox}>Toggle Box</button>
         </div>
     );
 }

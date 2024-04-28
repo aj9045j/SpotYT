@@ -80,16 +80,20 @@
 }
 
 
+.ss{
+    padding: 0;
+    margin: 0;
+}
 
 .container {
     position: fixed;
-    top: 50%;
+    bottom: 10%;
     right: 0;
     transform: translateY(-50%);
-    width: 600px;
-    height: 500px;
+    width: 285px;
+    height: 310px; 
     overflow: hidden;
-    z-index: 4;
+  
 }
 
 .box {
@@ -111,17 +115,43 @@
 }
 
 .toggle-btn {
-    position: relative;
-    left: 74%;
-    transform: translateX(50%);
+    position: fixed;
+    top: 35%;
+    right: 0px;
+    transform: translateY(-50%);
     padding: 10px 20px;
     border: none;
     background-color: #2ecc71;
     color: #fff;
     cursor: pointer;
+    z-index: 2;
+
+
+}
+.toggle-btn {
+    position: fixed;
+    top: 35%; /* Adjust top position as needed */
+     /* Adjust right position as needed */
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    background-color: #2ecc71;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    width: 150px; /* Adjust width as needed */
+    height: 50px;
+    left: 65%; /* Adjust height as needed */
 }
 
-.player img{
+
+.player img {
     height: 250px;
-    width: 285px;
+    width: 285px; 
 }
+
+.seen{
+    z-index: 1;
+}
+
+

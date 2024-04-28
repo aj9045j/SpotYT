@@ -44,7 +44,7 @@ export default function GetPlaylist(props) {
                 <div className="buttonn-base"></div>
             </button>
             <h1>Upload Spotify Playlist</h1>
-            <form action={`http://localhost:5000/search`} method='POST'>
+            <form action={`http://15.207.196.70:5000/search`} method='POST'>
                 <label htmlFor="url">enter the spotify url</label>
                 <input
                     placeholder="Type something here...."

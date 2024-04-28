@@ -26,7 +26,7 @@ export default function Extraxt() {
                     });
                     setUser(response.data);
                     setisLoggedIn(true);
-                    console.log("called");
+
                 } catch (error) {
                     console.log(error);
                 }

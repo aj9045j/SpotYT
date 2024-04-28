@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 export default function Searchyt() {
-
+    
+    const [isSeen, setisseen] = useState(false);
     const [audioUrl, setAudioUrl] = useState('');
     const [currImage, setCurrImage] = useState('');
     const [isVisible, setIsVisible] = useState(false);
@@ -41,7 +42,7 @@ export default function Searchyt() {
 
     return (
         <div>
-            <div className="container">
+            <div className={`container ${isSeen ? 'seen' : 'nseen'}`}>
                 <div className={`box ${isVisible ? 'show' : 'hide'}`}>
                     <div className='player'>
 
@@ -49,8 +50,8 @@ export default function Searchyt() {
                         <audio src={audioUrl} controls autoPlay></audio>
                     </div>
                 </div>
-                <button className="toggle-btn" onClick={toggleBox}>Toggle Box</button>
             </div>
+            <button className="toggle-btn" onClick={toggleBox}>Toggle Box</button>
             <form onSubmit={handlesubmit}>
                 <label htmlFor="url">enter the spotify url</label>
                 <input
