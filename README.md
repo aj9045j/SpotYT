@@ -52,7 +52,7 @@ Welcome to **SpotYT** – your one-stop destination for seamless music experienc
     
 3. Start the server:
     ```sh
-    npm start
+    node server.js
     ```
 
 ### Frontend Setup
