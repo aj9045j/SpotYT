@@ -49,13 +49,8 @@ Welcome to **SpotYT** – your one-stop destination for seamless music experienc
     cd backend
     npm install
     ```
-
-3. Configure environment variables:
-    ```sh
-    cp .env.example .env
-    ```
-
-4. Start the server:
+    
+3. Start the server:
     ```sh
     npm start
     ```
