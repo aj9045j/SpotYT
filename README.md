@@ -2,7 +2,7 @@
 
 Welcome to **SpotYT** – your one-stop destination for seamless music experience! Integrating the best of Spotify and YouTube, SpotYT lets you search for playlists, discover new songs, and manage your music preferences with ease.
 
-![SpotYT Logo](./logo.svg)
+
 
 ## 🌟 Features
 
@@ -103,7 +103,11 @@ Welcome to **SpotYT** – your one-stop destination for seamless music experienc
 
 ## 🤝 Contributing
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
+We welcome contributions! Feel free to fork the repository, make enhancements, and submit pull requests. Let's make spotYT even better together!
+
+Feel free to reach out if you have any questions or suggestions. Let's create something amazing together!
+
+
 
 ---
 
